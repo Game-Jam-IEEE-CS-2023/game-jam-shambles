@@ -13,7 +13,7 @@ set(CMAKE_EXPORT_COMPILE_COMMANDS on)
 add_executable(GAME src/main.cpp)
 
 target_include_directories(GAME PRIVATE include)
-target_sources(GAME PRIVATE src/View.cpp src/Button.cpp)
+target_sources(GAME PRIVATE src/View.cpp src/Button.cpp src/Character.cpp)
 
 # ##############################################################################
 

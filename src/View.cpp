@@ -20,7 +20,7 @@ void View::start_screen() {
   const rl::Vector2 BUTTON_POS = WINDOW_CENTER + rl::Vector2(0, 40);
 
   while (!m_window.ShouldClose()) {
-    BeginDrawing();
+    m_window.BeginDrawing();
 
     m_window.ClearBackground();
 
@@ -28,10 +28,10 @@ void View::start_screen() {
     TITLE.Draw(TITLE_POS);
 
     if (BUTTON1.is_clicked(BUTTON_POS)) {
-      EndDrawing();
+      m_window.EndDrawing();
       m_window.Close();
     }
 
-    EndDrawing();
+    m_window.EndDrawing();
   }
 }

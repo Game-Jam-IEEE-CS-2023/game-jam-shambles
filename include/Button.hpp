@@ -1,5 +1,5 @@
-#ifndef BUTTON_H
-#define BUTTON_H
+#ifndef BUTTON_HPP
+#define BUTTON_HPP
 
 #include <raylib-cpp.hpp>
 #include <string_view>
@@ -50,4 +50,4 @@ private:
   static auto get_default_texture() -> rl::Texture &;
 };
 
-#endif // !BUTTON_H
+#endif // !BUTTON_HPP
