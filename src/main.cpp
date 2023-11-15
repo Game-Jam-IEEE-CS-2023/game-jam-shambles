@@ -1,8 +1,13 @@
 #include "View.hpp"
 
-int main() {
+auto main() -> int {
   View view;
-  view.start_screen();
+  GAME_STATE next = view.start_screen();
+
+  if (next == GAME_STATE::END_SCREEN) {
+    view.end_screen();
+  }
+  next = view.game_screen();
 
   return 0;
 }

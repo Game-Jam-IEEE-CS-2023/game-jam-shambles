@@ -1,13 +1,11 @@
-#ifndef BUTTON_HPP
-#define BUTTON_HPP
+#ifndef ENV_ITEM_HPP
+#define ENV_ITEM_HPP
 
 #include <raylib-cpp.hpp>
 #include <string_view>
 
-[[maybe_unused]] constexpr std::string_view DEFAULT_FONT_PATH =
-    "src/assets/fonts/alagard.png";
-[[maybe_unused]] constexpr std::string_view DEFAULT_TEXTURE_PATH =
-    "src/assets/textures/test_old_button.png";
+constexpr std::string_view WALL_TEXTURE_PATH = "src/assets/textures/wall.png";
+constexpr std::string_view FLOOR_TEXTURE_PATH = "src/assets/textures/floor.png";
 
 [[maybe_unused]] constexpr int DEFAULT_FONT_SIZE = 20;
 [[maybe_unused]] constexpr int DEFAULT_MAX_TEXT = 50;
@@ -53,4 +51,4 @@ private:
   static auto get_default_texture() -> rl::Texture &;
 };
 
-#endif // !BUTTON_HPP
+#endif // !ENV_ITEM_HPP

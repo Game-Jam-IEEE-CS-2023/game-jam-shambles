@@ -5,14 +5,26 @@
 #include <optional>
 #include <raylib-cpp.hpp>
 #include <string_view>
+namespace rl = raylib;
 
 // Descriptors for the sprite
+enum class CHARACTER_COLOR { RED_CHARACTER = 'r', BLUE_CHARACTER = 'b' };
 enum class STATE { IDLE = 0, RUNNING = 1, JUMPING = 2, FALLING = 3 };
 enum class DIR { LEFT = 0, RIGHT = 1 };
 
-namespace rl = raylib;
+// Movement controls
 
-enum class CHARACTER_COLOR { RED_CHARACTER = 'r', BLUE_CHARACTER = 'b' };
+// Red: WASD
+[[maybe_unused]] constexpr KeyboardKey RED_UP = KEY_W;
+[[maybe_unused]] constexpr KeyboardKey RED_DOWN = KEY_S;
+[[maybe_unused]] constexpr KeyboardKey RED_LEFT = KEY_A;
+[[maybe_unused]] constexpr KeyboardKey RED_RIGHT = KEY_D;
+
+// Blue: Arrow keys
+[[maybe_unused]] constexpr KeyboardKey BLUE_UP = KEY_UP;
+[[maybe_unused]] constexpr KeyboardKey BLUE_DOWN = KEY_DOWN;
+[[maybe_unused]] constexpr KeyboardKey BLUE_LEFT = KEY_LEFT;
+[[maybe_unused]] constexpr KeyboardKey BLUE_RIGHT = KEY_RIGHT;
 
 class Character {
 public:
